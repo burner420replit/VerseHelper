@@ -35,20 +35,20 @@ def LevelBlocker(poklist):
         print(str(1+i)+"/"+str(len(poklist)), end="")
         input()
 
-def everstone(poklist):
+def Everstone(poklist):
     for i in range(len(poklist)):
         print(f"!buy everstone {poklist[i]}")
         print(str(1+i)+"/"+str(len(poklist)), end="")
         input()
 
-def evolve(poklist, evo_amount):
+def Evolve(poklist, evo_amount):
     for i in range(len(poklist)):
         for j in range(evo_amount):
             print(f"!buy xp {poklist[i]} 5")
             print(str(1+i)+"/"+str(len(poklist))+f' (Evo {j+1}/{evo_amount})', end="")
             input()
         
-def eotw(poklist):
+def EOTW(poklist):
     for i in range(len(poklist)):
         print("We are buying 5xp twice to ensure the pokemon evolves if its a first stage mon")
         print(f"!buy xp {poklist[i]} 5")
@@ -70,12 +70,12 @@ def TrySetMode():
     
     elif mode.lower() == "+45":
         print("\nMode is set to +45, copy the command, paste it in discord, then press enter here for a new command.\n")
-        BuyXP45(poklist)
+        Plus45(poklist)
         check_poklist()
         
     elif mode.lower() == "+90":
         print("\nMode is set to +90, copy the command, paste it in discord, then press enter here for a new command.\n")
-        BuyXP90(poklist)
+        Plus90(poklist)
         check_poklist()
     
     elif mode.lower() == "nick":
@@ -97,12 +97,12 @@ def TrySetMode():
         
     elif mode.lower() == "everstone":
         print("\nMode is set to everstone, copy the command, paste it in discord, then press enter here for a new command.\n")
-        everstone(poklist)
+        Everstone(poklist)
         check_poklist()
 
     elif mode.lower() == "eotw":
         print("\nMode is set to eotw, copy the command, paste it in discord, then press enter here for a new command.\n")
-        eotw(poklist)
+        EOTW(poklist)
         check_poklist()
 
     elif mode.lower() == "evolve":
@@ -115,7 +115,7 @@ def TrySetMode():
         if evo_amount < 1 or evo_amount > 2:
             print("Evo amount has to be 1 or 2!")
             TrySetMode()
-        evolve(poklist, evo_amount)
+        Evolve(poklist, evo_amount)
         check_poklist()
 
     else:
