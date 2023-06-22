@@ -40,6 +40,13 @@ def everstone(poklist):
         print(f"!buy everstone {poklist[i]}")
         print(str(1+i)+"/"+str(len(poklist)), end="")
         input()
+
+def evolve(poklist, evo_amount):
+    for i in range(len(poklist)):
+        for j in range(evo_amount):
+            print(f"!buy xp {poklist[i]} 5")
+            print(str(1+i)+"/"+str(len(poklist))+f' (Evo {j+1}/{evo_amount})', end="")
+            input()
         
 def eotw(poklist):
     for i in range(len(poklist)):
@@ -53,7 +60,7 @@ def eotw(poklist):
         
 
 def TrySetMode():
-    mode = str(input("Select a mode: buyxp, buyxp90, nick, mutate, levelblocker, everstone, eotw - "))
+    mode = str(input("Select a mode: buyxp, buyxp45, buyxp90, nick, mutate, levelblocker, everstone, eotw - "))
     if mode.lower() == "buyxp":
         print("\nMode is set to buyxp, copy the command, paste it in discord, then press enter here for a new command.\n")
         print("to find the desired amount of xp use !!xp XpToLevelUp AmountOfevels")
@@ -97,6 +104,20 @@ def TrySetMode():
         print("\nMode is set to eotw, copy the command, paste it in discord, then press enter here for a new command.\n")
         eotw(poklist)
         check_poklist()
+
+    elif mode.lower() == "evolve":
+        print("\nMode is set to evolve, copy the command, paste it in discord, then press enter here for a new command.\n")
+        try: 
+            evo_amount = int(input("How many times do you want to evolve your pokemon? - "))
+        except ValueError:
+            print("Value was not a number!")
+            TrySetMode()
+        if evo_amount < 1 or evo_amount > 2:
+            print("Evo amount has to be 1 or 2!")
+            TrySetMode()
+        evolve(poklist, evo_amount)
+        check_poklist()
+
     else:
         print(f"Mode '{mode}' does not exist, try again!'")
         TrySetMode()
