@@ -98,7 +98,7 @@ def TrySetMode():
         eotw(poklist)
         check_poklist()
     else:
-        print(f"Mode '{mode} does not exist, try again!'")
+        print(f"Mode '{mode}' does not exist, try again!'")
         TrySetMode()
 
 print("""
