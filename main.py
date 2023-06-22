@@ -4,13 +4,13 @@ def BuyXP(poklist, xp):
         print(str(i+1)+"/"+str(len(poklist)), end="")
         input()
 
-def BuyXP45(poklist):
+def Plus45(poklist):
     for i in range(len(poklist)):
         print(f"!buy xp {poklist[i]} 17926")
         print(str(i+1)+"/"+str(len(poklist)), end="")
         input()
 
-def BuyXP90(poklist):
+def Plus90(poklist):
     for i in range(len(poklist)):
         print(f"!buy xp {poklist[i]} 9675711")
         print(str(i+1)+"/"+str(len(poklist)), end="")
@@ -60,7 +60,7 @@ def eotw(poklist):
         
 
 def TrySetMode():
-    mode = str(input("Select a mode: buyxp, buyxp45, buyxp90, nick, mutate, levelblocker, everstone, eotw - "))
+    mode = str(input("Select a mode: buyxp, +45, +90, nick, mutate, levelblocker, everstone, eotw - "))
     if mode.lower() == "buyxp":
         print("\nMode is set to buyxp, copy the command, paste it in discord, then press enter here for a new command.\n")
         print("to find the desired amount of xp use !!xp XpToLevelUp AmountOfevels")
@@ -68,13 +68,13 @@ def TrySetMode():
         BuyXP(poklist,xp)
         check_poklist()
     
-    elif mode.lower() == "buyxp45":
-        print("\nMode is set to buyxp, copy the command, paste it in discord, then press enter here for a new command.\n")
+    elif mode.lower() == "+45":
+        print("\nMode is set to +45, copy the command, paste it in discord, then press enter here for a new command.\n")
         BuyXP45(poklist)
         check_poklist()
         
-    elif mode.lower() == "buyxp90":
-        print("\nMode is set to buyxp, copy the command, paste it in discord, then press enter here for a new command.\n")
+    elif mode.lower() == "+90":
+        print("\nMode is set to +90, copy the command, paste it in discord, then press enter here for a new command.\n")
         BuyXP90(poklist)
         check_poklist()
     
