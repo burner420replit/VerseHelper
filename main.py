@@ -4,6 +4,11 @@ def BuyXP(poklist, xp):
         print(str(i+1)+"/"+str(len(poklist)), end="")
         input()
 
+def BuyXP45(poklist):
+    for i in range(len(poklist)):
+        print(f"!buy xp {poklist[i]} 17926")
+        print(str(i+1)+"/"+str(len(poklist)), end="")
+        input()
 
 def BuyXP90(poklist):
     for i in range(len(poklist)):
@@ -54,6 +59,11 @@ def TrySetMode():
         print("to find the desired amount of xp use !!xp XpToLevelUp AmountOfevels")
         xp = int(input("What is the desired amount of xp? - "))
         BuyXP(poklist,xp)
+        check_poklist()
+    
+    elif mode.lower() == "buyxp45":
+        print("\nMode is set to buyxp, copy the command, paste it in discord, then press enter here for a new command.\n")
+        BuyXP45(poklist)
         check_poklist()
         
     elif mode.lower() == "buyxp90":
