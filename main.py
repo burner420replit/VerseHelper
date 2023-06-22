@@ -4,6 +4,7 @@ def BuyXP(poklist, xp):
         print(str(i+1)+"/"+str(len(poklist)), end="")
         input()
 
+
 def BuyXP90(poklist):
     for i in range(len(poklist)):
         print(f"!buy xp {poklist[i]} 9675711")
