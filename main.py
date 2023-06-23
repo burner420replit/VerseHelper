@@ -148,6 +148,6 @@ def check_poklist():
         print("\n" + str(err) + "\n")
         check_poklist()
 
-
-check_poklist()
+while True:
+	check_poklist()
 
