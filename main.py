@@ -60,7 +60,7 @@ def EOTW(poklist):
         
 
 def TrySetMode():
-    mode = str(input("Select a mode: buyxp, +45, +90, nick, mutate, levelblocker, everstone, eotw - "))
+    mode = str(input("Select a mode: buyxp, +45, +90, nick, mutate, levelblocker, everstone, eotw, evolve - "))
     if mode.lower() == "buyxp":
         print("\nMode is set to buyxp, copy the command, paste it in discord, then press enter here for a new command.\n")
         print("to find the desired amount of xp use !!xp XpToLevelUp AmountOfevels")
